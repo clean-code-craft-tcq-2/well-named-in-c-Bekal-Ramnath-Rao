@@ -1,3 +1,6 @@
+#ifndef PAIRNUMBER_TO_COLOR_H__ 
+#define PAIRNUMBER_TO_COLOR_H__ 
+
 #include "ColorPair.h"
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
@@ -11,7 +14,12 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
     int zeroBasedPairNumber = pairNumber - 1;
     colorPair.majorColor = 
         (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
+    printf("%d\n",colorPair.majorColor);
     colorPair.minorColor =
         (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
+    printf("%d\n",colorPair.minorColor);
+    printf("OK Jaanu\n");
     return colorPair;
 }
+
+#endif

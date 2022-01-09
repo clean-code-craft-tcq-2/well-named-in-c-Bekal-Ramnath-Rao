@@ -2,6 +2,7 @@
 #include <assert.h>
 #include "PairNumber_To_Color.h"
 #include "Color_To_PairNumber.h"
+#include "Reference_Manual.h"
 
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
@@ -29,11 +30,14 @@ void testPairToNumber(
 }
 
 int main() {
+	
     testNumberToPair(4, WHITE, BROWN);
     testNumberToPair(5, WHITE, SLATE);
 
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
+    
+    Reference_Manual();
 
     return 0;
 }
