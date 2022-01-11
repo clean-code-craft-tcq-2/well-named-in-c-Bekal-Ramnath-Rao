@@ -10,7 +10,7 @@ void Reference_Manual()
 	ColorPair color_pair;
 
 
-	printf("Pair Number\t|\tMajor Color\t|\t Minor Color\n");
+	printf("Pair Number\t|\tMajor Color\t|\tMinor Color\n");
 	for(i=0;i<numberOfMajorColors;i++)
 	{
 		color_pair.majorColor = (enum MajorColor)(i);
