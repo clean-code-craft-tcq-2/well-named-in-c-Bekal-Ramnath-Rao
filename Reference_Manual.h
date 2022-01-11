@@ -1,24 +1,25 @@
 #ifndef REFERENCE_MANUAL_H__ 
 #define REFERENCE_MANUAL_H__
 
-#include "PairNumber_To_Color.h"
-#include "Color_To_PairNumber.h"
 #include "ColorPair.h"
 #include <stdio.h>
 
 void Reference_Manual()
 {
-	ColorPair* colorpair_manual;
-	int i;
-	char colorPairNames1[MAX_COLORPAIR_NAME_CHARS];
-	for(i=1;i<=25;i++)
+	int i,j,k=0;
+	ColorPair color_pair;
+
+
+	printf("Pair Number\t|\tMajor Color\t|\t Minor Color\n");
+	for(i=0;i<numberOfMajorColors;i++)
 	{
-		*colorpair_manual = GetColorFromPairNumber(i);
-		printf("%s %s",
-        MajorColorNames[colorpair_manual->majorColor],
-        MinorColorNames[colorpair_manual->minorColor]);
-    	//ColorPairToString(&colorpair, colorPairNames1);
-    	//printf("%s\n", colorPairNames1);
+		color_pair.majorColor = (enum MajorColor)(i);
+		for(j=0;j<numberOfMinorColors;j++)
+		{
+			printf("%d\t\t|\t",++k);
+			color_pair.minorColor = (enum MinorColor)(j);
+			printf("%s\t\t|\t%s\n", MajorColorNames[color_pair.majorColor], MinorColorNames[color_pair.minorColor]);
+		}
 	}
 }
 
