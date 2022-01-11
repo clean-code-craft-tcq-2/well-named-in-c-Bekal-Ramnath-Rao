@@ -37,6 +37,7 @@ int main() {
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
     
+    printf("\nDear Technician, Refer Below Manual for Reference\n\n");
     Reference_Manual();
 
     return 0;
