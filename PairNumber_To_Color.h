@@ -14,11 +14,8 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
     int zeroBasedPairNumber = pairNumber - 1;
     colorPair.majorColor = 
         (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
-    printf("%d\n",colorPair.majorColor);
     colorPair.minorColor =
         (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-    printf("%d\n",colorPair.minorColor);
-    printf("OK Jaanu\n");
     return colorPair;
 }
 
