@@ -4,11 +4,16 @@
 #include "ColorPair.h"
 #include "testPairToNumber.h"
 #include <stdio.h>
+#include "stdbool.h"
+
+int reference_manual;
 
 void referenceManual()
 {
 	int i,j,k=0;
 	ColorPair color_pair;
+
+	reference_manual = 1;
 
 	printf("Pair Number\t|\tMajor Color\t|\tMinor Color\n");
 	for(i=0;i<numberOfMajorColors;i++)
