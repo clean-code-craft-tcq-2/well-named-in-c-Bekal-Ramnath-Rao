@@ -17,7 +17,7 @@ void referenceManual()
 		for(j=0;j<numberOfMinorColors;j++)
 		{
 			printf("%d\t\t|\t",++k);
-			testPairToNumber(color_pair.majorColor, color_pair.minorColor, k);
+			testPairToNumber(color_pair.majorColor, color_pair.minorColor, k-1);
 			color_pair.minorColor = (enum MinorColor)(j);
 			printf("%s\t\t|\t%s\n", MajorColorNames[color_pair.majorColor], MinorColorNames[color_pair.minorColor]);
 		}
