@@ -8,7 +8,7 @@
 
 int reference_manual;
 
-void referenceManual()
+void printReferencemanual()
 {
 	int i,j,k=0;
 	ColorPair color_pair;
